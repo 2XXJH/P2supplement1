@@ -85,3 +85,17 @@ def test_insert_multiple_levels():
     assert root.left.left is not None
     assert root.left.left.data == 3
     assert root.left.left.node_id == "root-L-L"
+
+def test_to_string():
+    root = Node("root", 10)
+    root.insert(5)
+    root.insert(15)
+    result = root.to_string()
+    expected = (
+        "ID: root, Data: 10\n"
+        "\tID: root-L, Data: 5\n"
+        "\tID: root-R, Data: 15\n"
+    )
+    assert result == expected
+
+
