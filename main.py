@@ -55,3 +55,12 @@ def test_insert_right():
     assert root.right is not None
     assert root.right.data == 15
     assert root.right.node_id == "root-R"
+
+def test_insert_multiple_levels():
+    root = Node("root", 10)
+    root.insert(5)
+    root.insert(15)
+    root.insert(3)  # Goes to root.left.left
+    assert root.left.left is not None
+    assert root.left.left.data == 3
+    assert root.left.left.node_id == "root-L-L"
