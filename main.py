@@ -47,6 +47,24 @@ class Node:
                 self.right.insert(new_data) 
 
     def to_string(self, level=0):
+        """
+        Dumps the node and its children into a formatted string representation.
+
+        Args:
+            level (int): The current depth level of the node (used for indentation).
+        
+        Returns:
+            str: A string representation of the node and its children,
+            formatted with indentation to reflect the tree structure.
+        """
+
+
+
+
+
+
+
+
         result = "\t" * level + f"ID: {self.node_id}, Data: {self.data}\n"
         if self.left:
             result += self.left.to_string(level + 1)
