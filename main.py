@@ -24,6 +24,17 @@ class Node:
         self.right = None
 
     def insert(self, new_data):
+        """
+        Inserts new data into the binary tree following binary search tree rules.
+
+        Args:
+            new_data (int): The integer data to insert.
+        
+        Inserts:
+            - If new_data is less than the current node's data, it goes to the left child.
+            - If new_data is greater or equal, it goes to the right child.
+            - Creates a new Node if the appropriate child does not already exist.
+        """
         if new_data < self.data:
             if self.left is None:
                 self.left = Node(f"{self.node_id}-L", new_data)
