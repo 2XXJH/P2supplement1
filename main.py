@@ -23,7 +23,17 @@ class Node:
         self.left = None
         self.right = None
 
-    
+    def insert(self, new_data):
+        if new_data < self.data:
+            if self.left is None:
+                self.left = Node(f"{self.node_id}-L", new_data)
+            else:
+                self.left.insert(new_data)
+        else:
+            if self.right is None:
+                self.right = Node(f"{self.node_id}-R", new_data)
+            else:
+                self.right.insert(new_data) 
 
 
 
