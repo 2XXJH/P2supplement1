@@ -23,7 +23,7 @@ class Node:
         self.left = None
         self.right = None
 
-
+    
 
 
 
@@ -41,3 +41,10 @@ def test_should_return_node_initialization():
     assert node.data == 10
     assert node.left is None
     assert node.right is None
+
+def test_insert_left():
+    root = Node("root", 10)
+    root.insert(5)
+    assert root.left is not None
+    assert root.left.data == 5
+    assert root.left.node_id == "root-L"
