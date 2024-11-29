@@ -46,7 +46,13 @@ class Node:
             else:
                 self.right.insert(new_data) 
 
-
+    def to_string(self, level=0):
+        result = "\t" * level + f"ID: {self.node_id}, Data: {self.data}\n"
+        if self.left:
+            result += self.left.to_string(level + 1)
+        if self.right:
+            result += self.right.to_string(level + 1)
+        return result
 
 
 
