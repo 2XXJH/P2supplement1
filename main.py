@@ -11,6 +11,13 @@ class Node:
         right (Node): The right child of the node.
     """
     def __init__(self, node_id, data):
+        """
+        Initializes a Node with a unique ID and data.
+
+        Args:
+            node_id (str): Unique identifier for the node.
+            data (int): Integer data to be stored in the node.
+        """
         self.node_id = node_id
         self.data = data
         self.left = None
