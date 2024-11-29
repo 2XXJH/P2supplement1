@@ -48,3 +48,10 @@ def test_insert_left():
     assert root.left is not None
     assert root.left.data == 5
     assert root.left.node_id == "root-L"
+
+def test_insert_right():
+    root = Node("root", 10)
+    root.insert(15)
+    assert root.right is not None
+    assert root.right.data == 15
+    assert root.right.node_id == "root-R"
